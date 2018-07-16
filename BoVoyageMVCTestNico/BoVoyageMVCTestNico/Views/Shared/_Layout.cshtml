@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Accueil</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+
+<body>
+
+    <div class="jumbotron jumbotron-fluid bg-info text-white text-center">
+        <div class="container">
+            <h1 class="display-1">Bo Voyage MVC Test</h1>
+            <p class="lead">Le monde est un livre et ceux qui ne voyagent pas n'en lisent qu'une page</p>
+            <nav class="row navbar navbar-expand-lg navbar-text bg-info justify-content-around">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" class="btn-info col-2 lead">Agences</a></li>
+                    <li><a href="#" class="btn-info col-2 lead">Clients</a></li>
+                    <li><a href="#" class="btn-info col-2 lead">Destinations</a></li>
+                    <li><a href="#" class="btn-info col-2 lead">Dossiers</a></li>
+                    <li><a href="#" class="btn-info col-2 lead">Participants</a></li>
+                    <li><a href="#" class="btn-info col-2 lead">Voyages</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    @RenderBody()
+    <div class="container">
+        <div class="row">
+            <footer class="bg-light w-100">
+                &copy; POEC Rouen 2018
+            </footer>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
