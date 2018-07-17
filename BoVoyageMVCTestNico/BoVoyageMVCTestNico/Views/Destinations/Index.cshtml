@@ -1,0 +1,53 @@
+﻿@model IEnumerable<BoVoyageMVCTestNico.Models.Destination>
+<div class="container">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Continent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pays)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Region)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                Modifier
+            </th>
+            <th>
+                Supprimer
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Continent)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pays)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Region)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
