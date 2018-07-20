@@ -153,6 +153,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AgencesController.cs" />
     <Compile Include="Controllers\DestinationsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Data\BoVoyageMVCTestNicoDbContext.cs" />
@@ -186,6 +187,11 @@
     <Content Include="Views\Destinations\Details.cshtml" />
     <Content Include="Views\Destinations\Edit.cshtml" />
     <Content Include="Views\Destinations\Index.cshtml" />
+    <Content Include="Views\Agences\Create.cshtml" />
+    <Content Include="Views\Agences\Delete.cshtml" />
+    <Content Include="Views\Agences\Details.cshtml" />
+    <Content Include="Views\Agences\Edit.cshtml" />
+    <Content Include="Views\Agences\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

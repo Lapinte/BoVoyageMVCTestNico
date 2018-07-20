@@ -1,7 +1,12 @@
 ﻿@model IEnumerable<BoVoyageMVCTestNico.Models.Destination>
+
+@{
+    ViewBag.Title = "Index";
+}
+
 <div class="container">
     <p>
-        @Html.ActionLink("Create New", "Create")
+        @Html.ActionLink("Ajouter une destination", "Create")
     </p>
     <table class="table">
         <tr>
