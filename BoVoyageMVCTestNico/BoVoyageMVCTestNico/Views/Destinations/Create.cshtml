@@ -42,9 +42,9 @@
         </div>
 
         <div class="row form-group justify-content-center">
-            
-                <input type="submit" value="Create" class="btn btn-success col-6" />
-            
+
+            <input type="submit" value="Create" class="btn btn-success col-6" />
+
         </div>
 
         <div>
@@ -54,5 +54,11 @@
     </div>
 }
 
+@section SectionScripts{
+    <script src="~/Scripts/tinymce/tinymce.min.js"></script>
+    <script>
+        tinymce.init({ selector: "#Description"})
+    </script>
+}
 
 
