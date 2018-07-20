@@ -9,45 +9,36 @@
     <p>
         @Html.ActionLink("Ajouter une Agence", "Create")
     </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nom)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreatedAt)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Deleted)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DeletedAt)
-            </th>
-            <th></th>
-        </tr>
-
-        @foreach (var item in Model)
-        {
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nom)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CreatedAt)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Deleted)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DeletedAt)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nom)
+                </th>
+                <th class="text-center">
+                    Modifier
+                </th>
+                <th class="text-center">
+                    Supprimer
+                </th>
             </tr>
-        }
 
-    </table>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="align-middle">
+                        @Html.DisplayFor(modelItem => item.Nom)
+                    </td>
+                    <td class="align-middle text-center">
+                        <a href="@Url.Action("Edit", new { id=item.ID})"><i class="fa fa-edit text-warning"></i></a>
+                    </td>
+                    <td class="align-middle text-center">
+                        <a href="@Url.Action("Delete", new { id=item.ID})"><i class="fa fa-trash"></i></a>
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+    </div>
 </div>

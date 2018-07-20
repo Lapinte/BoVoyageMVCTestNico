@@ -10,17 +10,17 @@ namespace BoVoyageMVCTestNico.Models
     public class Destination : BaseModel
     {
         [Required(ErrorMessage = "Le Continent est obligatoire")]
-        [Display(Name = "Continent :")]
+        [Display(Name = "Continent")]
         [StringLength(50, MinimumLength = 2, ErrorMessage = "Le champ {0} doit contenir entre {2} et {1} caractères")]
         public string Continent { get; set; }
 
         [Required(ErrorMessage = "Le Pays est obligatoire")]
-        [Display(Name = "Pays :")]
+        [Display(Name = "Pays")]
         [StringLength(50, MinimumLength = 2, ErrorMessage = "Le champ {0} doit contenir entre {2} et {1} caractères")]
         public string Pays { get; set; }
 
         [Required(ErrorMessage = "Le Region est obligatoire")]
-        [Display(Name = "Région :")]
+        [Display(Name = "Région")]
         [StringLength(50, MinimumLength = 2, ErrorMessage = "Le champ {0} doit contenir entre {2} et {1} caractères")]
         public string Region { get; set; }
 
