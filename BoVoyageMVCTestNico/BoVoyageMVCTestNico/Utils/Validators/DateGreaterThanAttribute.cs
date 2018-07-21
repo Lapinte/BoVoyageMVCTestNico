@@ -18,6 +18,10 @@ namespace BoVoyageMVCTestNico.Utils.Validators
 
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
+            if (value == null)
+            {
+                return new ValidationResult("La date de retour est obligatoire");
+            }
             DateTime laterDate = (DateTime)value;
 
             DateTime earlierDate = (DateTime)validationContext.ObjectType.GetProperty(DateToCompareToFieldName).GetValue(validationContext.ObjectInstance, null);
