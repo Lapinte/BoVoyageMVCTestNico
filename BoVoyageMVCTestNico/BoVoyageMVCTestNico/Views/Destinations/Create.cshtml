@@ -6,7 +6,7 @@
     @Html.AntiForgeryToken()
 
     <div class="container form-horizontal">
-        <h4>Destination</h4>
+        <h4>Ajouter une Destination</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="row form-group">
@@ -41,23 +41,21 @@
             </div>
         </div>
 
-        <div class="row form-group justify-content-center">
-
-            <input type="submit" value="Create" class="btn btn-success col-6" />
-
+        <div class="form-group">
+            <input type="submit" value="Ajouter" class="btn btn-success col-4" />
         </div>
 
         <div>
-            @Html.ActionLink("Back to List", "Index")
+            @Html.ActionLink("Retour à la liste des destinations", "Index")
         </div>
-
     </div>
 }
+
 
 @section SectionScripts{
     <script src="~/Scripts/tinymce/tinymce.min.js"></script>
     <script>
-        tinymce.init({ selector: "#Description"})
+        tinymce.init({ selector: "#Description" })
     </script>
 }
 
