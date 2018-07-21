@@ -1,0 +1,75 @@
+﻿@model IEnumerable<BoVoyageMVCTestNico.Models.Voyage>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <h1>Voyages</h1>
+    </div>
+    <p>
+        @Html.ActionLink("Ajouter un Voyage", "Create")
+    </p>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Agence.Nom)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Destination.Region)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateAller)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateRetour)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PlacesDisponibles)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TarifToutCompris)
+                </th>
+                <th class="text-center">
+                    Modifier
+                </th>
+                <th class="text-center">
+                    Supprimer
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td class="align-middle">
+                    @Html.DisplayFor(modelItem => item.Agence.Nom)
+                </td>
+                <td class="align-middle">
+                    @Html.DisplayFor(modelItem => item.Destination.Region)
+                </td>
+                <td class="align-middle">
+                    @Html.DisplayFor(modelItem => item.DateAller)
+                </td>
+                <td class="align-middle">
+                    @Html.DisplayFor(modelItem => item.DateRetour)
+                </td>
+                <td class="align-middle">
+                    @Html.DisplayFor(modelItem => item.PlacesDisponibles)
+                </td>
+                <td class="align-middle">
+                    @Html.DisplayFor(modelItem => item.TarifToutCompris)
+                </td>
+                <td class="align-middle text-center">
+                    <a href="@Url.Action("Edit", new { id=item.ID})"><i class="fa fa-edit text-warning"></i></a>
+                </td>
+                <td class="align-middle text-center">
+                    <a href="@Url.Action("Delete", new { id=item.ID})"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+            }
+
+        </table>
+    </div>
+</div>

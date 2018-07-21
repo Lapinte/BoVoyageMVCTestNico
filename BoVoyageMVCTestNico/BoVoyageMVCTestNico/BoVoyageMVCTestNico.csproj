@@ -304,6 +304,7 @@
     <Compile Include="Controllers\AgencesController.cs" />
     <Compile Include="Controllers\DestinationsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\VoyagesController.cs" />
     <Compile Include="Data\BoVoyageMVCTestNicoDbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -322,6 +323,9 @@
     <Compile Include="Models\Personne.cs" />
     <Compile Include="Models\Voyage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\Validators\DateGreaterThanAttribute.cs" />
+    <Compile Include="Utils\Validators\ExistingMailUser.cs" />
+    <Compile Include="Utils\Validators\Major.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -349,6 +353,11 @@
     <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce-mobile.woff" />
     <Content Include="Scripts\tinymce\langs\readme.md" />
     <Content Include="Scripts\jquery.validate.unobtrusive.bootstrap.min.js.map" />
+    <Content Include="Views\Voyages\Create.cshtml" />
+    <Content Include="Views\Voyages\Delete.cshtml" />
+    <Content Include="Views\Voyages\Details.cshtml" />
+    <Content Include="Views\Voyages\Edit.cshtml" />
+    <Content Include="Views\Voyages\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
