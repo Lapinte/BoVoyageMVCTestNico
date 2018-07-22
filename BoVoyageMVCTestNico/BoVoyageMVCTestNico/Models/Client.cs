@@ -14,7 +14,7 @@ namespace BoVoyageMVCTestNico.Models
 ErrorMessage = "L'adresse mail n'est pas au bon format")]
 
         [Required(ErrorMessage = "L'Email est obligatoire")]
-        [Display(Name = "Email :")]
+        [Display(Name = "Email")]
         public string Email { get; set; }
     }
 }

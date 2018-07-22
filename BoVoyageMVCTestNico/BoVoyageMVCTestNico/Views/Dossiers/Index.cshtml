@@ -1,0 +1,71 @@
+﻿@model IEnumerable<BoVoyageMVCTestNico.Models.Dossier>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <h1>Dossiers de réservations</h1>
+    </div>
+    <p>
+        @Html.ActionLink("Créer un nouveau dossier", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Client.Nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Voyage.Destination)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroCarteBancaire)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrixTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Assurance)
+            </th>
+            <th class="text-center">
+                Modifier
+            </th>
+            <th class="text-center">
+                Détails
+            </th>
+            <th class="text-center">
+                Supprimer
+            </th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Client.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Voyage.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroCarteBancaire)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrixTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Assurance)
+            </td>
+            <td class="align-middle text-center">
+                <a href="@Url.Action("Edit", new { id=item.ID})"><i class="fa fa-edit text-warning"></i></a>
+            </td>
+            <td class="align-middle text-center">
+                <a href="@Url.Action("Details", new { id=item.ID})"><i class="fa fa-edit text-warning"></i></a>
+            </td>
+            <td class="align-middle text-center">
+                <a href="@Url.Action("Delete", new { id=item.ID})"><i class="fa fa-trash"></i></a>
+            </td>
+
+        </tr>
+        }
+
+    </table>
+</div>

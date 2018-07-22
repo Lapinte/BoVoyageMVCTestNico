@@ -302,7 +302,9 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AgencesController.cs" />
+    <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\DestinationsController.cs" />
+    <Compile Include="Controllers\DossiersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\VoyagesController.cs" />
     <Compile Include="Data\BoVoyageMVCTestNicoDbContext.cs" />
@@ -358,6 +360,16 @@
     <Content Include="Views\Voyages\Details.cshtml" />
     <Content Include="Views\Voyages\Edit.cshtml" />
     <Content Include="Views\Voyages\Index.cshtml" />
+    <Content Include="Views\Clients\Create.cshtml" />
+    <Content Include="Views\Clients\Delete.cshtml" />
+    <Content Include="Views\Clients\Details.cshtml" />
+    <Content Include="Views\Clients\Edit.cshtml" />
+    <Content Include="Views\Clients\Index.cshtml" />
+    <Content Include="Views\Dossiers\Create.cshtml" />
+    <Content Include="Views\Dossiers\Delete.cshtml" />
+    <Content Include="Views\Dossiers\Details.cshtml" />
+    <Content Include="Views\Dossiers\Edit.cshtml" />
+    <Content Include="Views\Dossiers\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
