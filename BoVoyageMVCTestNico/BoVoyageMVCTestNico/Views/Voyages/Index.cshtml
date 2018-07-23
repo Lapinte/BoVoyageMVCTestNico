@@ -15,10 +15,10 @@
         <table class="table table-bordered table-striped">
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.Agence.Nom)
+                    @Html.DisplayNameFor(model => model.Agence)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Destination.Region)
+                    @Html.DisplayNameFor(model => model.Destination)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.DateAller)
@@ -47,6 +47,8 @@
                     @Html.DisplayFor(modelItem => item.Agence.Nom)
                 </td>
                 <td class="align-middle">
+                    @Html.DisplayFor(modelItem => item.Destination.Continent) |
+                    @Html.DisplayFor(modelItem => item.Destination.Pays) |
                     @Html.DisplayFor(modelItem => item.Destination.Region)
                 </td>
                 <td class="align-middle">

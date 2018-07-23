@@ -41,7 +41,7 @@ namespace BoVoyageMVCTestNico.Controllers
         public ActionResult Create()
         {
             ViewBag.ClientID = new SelectList(db.Clients, "ID", "Nom");
-            ViewBag.VoyageID = new SelectList(db.Voyages, "ID", "Destination");
+            ViewBag.VoyageID = new SelectList(db.Voyages.Include(x => x.Destination), "ID", "Destination.Region");
             return View();
         }
 
@@ -59,8 +59,8 @@ namespace BoVoyageMVCTestNico.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ClientID = new SelectList(db.Clients, "ID", "Email", dossier.ClientID);
-            ViewBag.VoyageID = new SelectList(db.Voyages, "ID", "ID", dossier.VoyageID);
+            ViewBag.ClientID = new SelectList(db.Clients, "ID", "Nom", dossier.ClientID);
+            ViewBag.VoyageID = new SelectList(db.Voyages, "ID", "Destination", dossier.VoyageID);
             return View(dossier);
         }
 
