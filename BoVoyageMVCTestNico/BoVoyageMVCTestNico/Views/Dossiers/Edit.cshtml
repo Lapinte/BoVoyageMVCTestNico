@@ -1,97 +1,142 @@
-﻿@model BoVoyageMVCTestNico.Models.Dossier
+﻿@model
 
 @{
-    ViewBag.Title = "Edit";
-}
+            public override void Execute()
+            { }
 
 <h2>Edit</h2>
 
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Dossier</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.ID)
+@#line default
+#line hidden
+@
+#line default
+#line hidden
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.NumeroCarteBancaire, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.NumeroCarteBancaire, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.NumeroCarteBancaire, "", new { @class = "text-danger" })
-            </div>
+<div class="form-horizontal">
+    <h4>Dossier</h4>
+    <hr />
+    @
+    @
+
+    <div class="form-group">
+        @
+        <div class="col-md-10">
+            @
+            @
         </div>
+    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.PrixTotal, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.PrixTotal, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.PrixTotal, "", new { @class = "text-danger" })
-            </div>
+    <div class="form-group">
+        @
+        <div class="col-md-10">
+            @
+            @
         </div>
+    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Assurance, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.Assurance)
-                    @Html.ValidationMessageFor(model => model.Assurance, "", new { @class = "text-danger" })
-                </div>
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.VoyageID, "VoyageID", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("VoyageID", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.VoyageID, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.ClientID, "ClientID", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("ClientID", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.ClientID, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.CreatedAt, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.CreatedAt, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CreatedAt, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Deleted, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.Deleted)
-                    @Html.ValidationMessageFor(model => model.Deleted, "", new { @class = "text-danger" })
-                </div>
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.DeletedAt, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.DeletedAt, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.DeletedAt, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+    <div class="form-group">
+        @
+        <div class="col-md-10">
+            <div class="checkbox">
+                @
+                @
             </div>
         </div>
     </div>
-}
+
+    <div class="form-group">
+        @
+        <div class="col-md-10">
+            @
+            @
+        </div>
+    </div>
+
+    <div class="form-group">
+        @
+        <div class="col-md-10">
+            @
+            @
+        </div>
+    </div>
+
+    <div class="form-group">
+        @
+        <div class="col-md-10">
+            @
+            @
+        </div>
+    </div>
+
+    <div class="form-group">
+        @
+        <div class="col-md-10">
+            <div class="checkbox">
+                @
+                @
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @
+        <div class="col-md-10">
+            @
+            @
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+#line default
+#line hidden
+
+<div class="container text-center">
+    <button type="button" class="col-4 btn btn-outline-info" data-toggle="collapse" data-target="#participantDiv">Ajouter un participant</button>
+</div>
+#line default
+#line hidden
+
+<div id="participantDiv" class="container collapse">
+    <form id="participantForm">
+        <div class="row form-group justify-content-center">
+            <label for="nom" class="col-form-label col-sm-1">Nom</label>
+            <div class="col-sm-2">
+                <input class="form-control" value="" id="nom" type="text" />
+            </div>
+
+            <label for="prenom" class="col-form-label col-sm-1">Prénom</label>
+            <div class="col-sm-2">
+                <input class="form-control" value="" id="prenom" type="text" />
+            </div>
+
+            <label for="adresse" class="col-form-label col-sm-1">Adresse</label>
+            <div class="col-sm-2">
+                <input class="form-control" value="" id="adresse" type="text" />
+            </div>
+
+            <label for="telephone" class="col-form-label col-sm-1">Téléphone</label>
+            <div class="col-sm-2">
+                <input class="form-control" value="" id="telephone" type="text" />
+            </div>
+
+            <label for="searchBirthdate" class="col-form-label col-sm-1">Date de naissance</label>
+            <div class="col-sm-3">
+                <input class="form-control" value="" id="searchBirthdate" type="date" />
+            </div>
+
+            <div class="col-sm-4">
+                <button id="ajoutParticipant" type="submit" class="btn btn-outline-info btn-lg btn-block">Ajouter le participant</button>
+            </div>
+        </div>
+    </form>
+</div>
+#line default
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @
 </div>

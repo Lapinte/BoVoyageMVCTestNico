@@ -50,7 +50,7 @@ namespace BoVoyageMVCTestNico.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,NumeroCarteBancaire,PrixTotal,Assurance,VoyageID,ClientID,CreatedAt,Deleted,DeletedAt")] Dossier dossier)
+        public ActionResult Create([Bind(Include = "nbParticipants,nbEnfants,ID,NumeroCarteBancaire,PrixTotal,Assurance,VoyageID,ClientID,CreatedAt,Deleted,DeletedAt")] Dossier dossier)
         {
             if (ModelState.IsValid)
             {
